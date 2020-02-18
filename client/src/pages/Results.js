@@ -14,6 +14,7 @@ class Results extends Component {
         this.setState({ [name]: value });
     };
 
+    // Queries the Google Books API for a list of books matching the search terms
     handleFormSubmit = event => {
         event.preventDefault();
 
@@ -27,6 +28,7 @@ class Results extends Component {
         }
     };
 
+    // Saves a book to our MongoDB
     saveBook = book => {
         axios.post("/api/books", 
         {

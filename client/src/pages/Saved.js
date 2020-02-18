@@ -11,6 +11,7 @@ class Saved extends Component {
         this.loadSavedBooks();
     }
 
+    // Requests saved books from our MongoDB
     loadSavedBooks = () => {
         axios.get("/api/books")
             .then(res => {
@@ -20,6 +21,7 @@ class Saved extends Component {
             .catch(err => console.log(err))
     }
 
+    // Removes a specific book from our MongoDB
     deleteBook = id => {
         axios.delete("/api/books/" + id)
             .then(res => this.loadSavedBooks())

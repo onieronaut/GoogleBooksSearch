@@ -13,12 +13,9 @@ if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
 
+mongoose.connect(process.env.MONGODB_URI || "mongodb://user1:password1@ds237267.mlab.com:37267/heroku_s5ss13j3");
 
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/googlebooks");
-
-
-// Send every request to the React app
-// Define any API routes before this runs
+// API Routes
 app.get("/api/books", (req,res) => {
   db.Book.find({}).then(data => res.json(data));
 })
@@ -36,20 +33,11 @@ app.post("/api/books", (req,res) => {
         .catch(err => res.status(422).json(err));
 })
 
-
+//Reroutes to index page if page is not found
 app.get("*", function(req, res) {
   res.sendFile(path.join(__dirname, "./client/build/index.html"));
 });
 
 app.listen(PORT, function() {
   console.log(`🌎 ==> API server now on port ${PORT}!`);
-
-  db.Book.create({
-      title: "The Hunger Games",
-      authors: ["Suzanne Collins"],
-      description: "Set in a dark vision of the near future, a terrifying reality TV show is taking place. Twelve boys and twelve girls are forced to appear in a live event called The Hunger Games. There is only one rule: kill or be killed. When sixteen-year-old Katniss Everdeen steps forward to take her younger sister's place in the games, she sees it as a death sentence. But Katniss has been close to death before. For her, survival is second nature.",
-      image: "http://books.google.com/books/content?id=sazytgAACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
-      link: "http://books.google.com/books?id=sazytgAACAAJ&dq=title:The+Hunger+Games&hl=&source=gbs_api"
-    }
-  ).then(data => console.log("document added"));
 });
