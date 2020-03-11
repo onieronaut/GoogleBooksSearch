@@ -1,29 +1,49 @@
-# Create React Express App
+# GoogleBooksSearch
 
-## About This Boilerplate
+https://onieronaut-booksearch.herokuapp.com/
 
-This setup allows for a Node/Express/React app which can be easily deployed to Heroku.
+## About
 
-The front-end React app will auto-reload as it's updated via webpack dev server, and the backend Express app will auto-reload independently with nodemon.
+A full stack MERN application where users can search for books via the Google Books API. Results are returned to the user, then the user can save the book to a reading list if or get more information.
 
-## Starting the app locally
+## Getting Started
 
-Start by installing front and backend dependencies. While in this directory, run the following command:
+Download or clone the repository [here](https://github.com/onieronaut/ebrius)
 
-```
-npm install
-```
+### Prerequisites
 
-This should install node modules within the server and the client folder.
+[Node.js](https://nodejs.org/en/)
 
-After both installations complete, run the following command in your terminal:
+[MongoDB](https://mongodb.com)
 
-```
-npm start
-```
+### Installation
 
-Your app should now be running on <http://localhost:3000>. The Express server should intercept any AJAX requests from the client.
+After downloading the repository and installing Node.js, use your command line interface to navigate to the directory the repository is located in and install the required packages with:
 
-## Deployment (Heroku)
+    npm install
 
-To deploy, simply add and commit your changes, and push to Heroku. As is, the NPM scripts should take care of the rest.
+Then navigate to the client folder and execute another
+
+    npm install
+
+## Usage
+
+Once you have installed the required modules you can start a local server by running this line in your root directory in Node.
+
+    npm start
+
+A new browser tab will eventually open via React.
+
+## Built With
+
+* [Javascript](https://www.javascript.com/)
+* [Express](https://expressjs.com/)
+* [Node](https://nodejs.org/en/)
+* [MongoDB](https://mongodb.com)
+* [Mongoose](https://mongoosejs.com/)
+* [React](https://reactjs.org/)
+* [Bootstrap](https://getbootstrap.com/)
+
+## Author
+
+* Jerard Gonzalez | [GitHub](https://github.com/onieronaut) [LinkedIn](https://www.linkedin.com/in/jerardgonzalez) [Portfolio](https://onieronaut.github.io/)
