@@ -8,7 +8,7 @@ A full stack MERN application where users can search for books via the Google Bo
 
 ## Getting Started
 
-Download or clone the repository [here](https://github.com/onieronaut/ebrius)
+Download or clone the repository [here](https://github.com/onieronaut/GoogleBooksSearch)
 
 ### Prerequisites
 

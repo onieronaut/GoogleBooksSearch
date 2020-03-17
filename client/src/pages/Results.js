@@ -43,7 +43,6 @@ class Results extends Component {
     }
 
     render() {
-        console.log(this.state.books)
         return (
             <div>
                 <BookSearch
